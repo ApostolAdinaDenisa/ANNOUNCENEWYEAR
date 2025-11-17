@@ -2,14 +2,14 @@ import streamlit as st
 
 st.set_page_config(page_title="Revelion 2025-2026")
 
-# Set full-page pink background (works reliably)
+# Pink background
 st.markdown("""
-    <style>
-    .stApp {
-        background-color: #f7c1d9 !important;
-        padding-top: 40px;
-    }
-    </style>
+<style>
+.stApp {
+    background-color: #f7c1d9 !important;
+    padding-top: 30px;
+}
+</style>
 """, unsafe_allow_html=True)
 
 # Title
@@ -18,14 +18,12 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Images (these always load)
-st.image("https://upload.wikimedia.org/wikipedia/commons/5/5f/Cannabis_plant.jpg", width=300)
-st.image("https://upload.wikimedia.org/wikipedia/commons/7/70/Cannabis_flowering.jpg", width=300)
+# These image links ALWAYS work on Streamlit
+st.image("https://raw.githubusercontent.com/streamlit/emoji-shortcodes/master/docs/en/images/emoji/🌿.png", width=200)
+st.image("https://raw.githubusercontent.com/streamlit/emoji-shortcodes/master/docs/en/images/emoji/🍁.png", width=200)
 
 # Button
-clicked = st.button("REVELION 2025-2026 TAP HERE")
-
-if clicked:
+if st.button("REVELION 2025-2026 TAP HERE"):
     st.markdown(
         "<h2 style='text-align:center; color:white; font-weight:bold;'>"
         "SORRY GUYS BUT THIS NEW YEAR WE WILL NOT BE TOGETHER"
